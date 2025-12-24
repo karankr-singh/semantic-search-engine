@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semantic Search Engine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+        input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .result {
+            background: white;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🔍 Semantic Search Engine</h2>
+    <p>Search documents by <b>meaning</b>, not keywords.</p>
+
+    <form method="POST">
+        <input
+            type="text"
+            name="query"
+            placeholder="Enter your search query"
+            value="{{ query }}"
+            required
+        />
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        <h3>Top Results</h3>
+        {% for doc, score in results %}
+            <div class="result">
+                <b>Score:</b> {{ "%.2f"|format(score) }} <br>
+                {{ doc }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+</body>
+</html>

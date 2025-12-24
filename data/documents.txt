@@ -1,0 +1,6 @@
+Online exam proctoring systems use webcams and AI to detect cheating.
+Plagiarism detection tools compare documents to find copied content.
+Machine learning models are used for fake news detection.
+Semantic search retrieves documents based on meaning rather than keywords.
+Resume screening systems rank candidates using NLP techniques.
+Expense tracking applications analyze spending patterns.
